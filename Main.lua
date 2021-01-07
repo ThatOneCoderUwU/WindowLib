@@ -2,8 +2,6 @@
 local module = {}
 
 local InitWindowObject = function()
-		local a=Instance.new"ScreenGui"
-		a.Name="Window"
 		local b=Instance.new"Frame"
 		b.Name="Container"
 		b.AnchorPoint=Vector2.new(0.5,0.5)
@@ -79,7 +77,7 @@ local InitWindowObject = function()
 		h.TextWrapped=true
 		h.Parent=b
 		
-		return a
+		return b
 end
 
 
