@@ -1,3 +1,4 @@
+-- Copyright (c) 2021 ThatOneCoder. All Rights Reserved. --
 local module = {}
 
 local InitWindowObject = function()
