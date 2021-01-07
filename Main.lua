@@ -144,6 +144,16 @@ function module.new(insertIntoCoreGui)
 		return cont
 	end
 	
+	function mod:Show()
+		cont.Visible=true
+		return self;
+	end
+	
+	function mod:Hide()
+		cont.Visible=true
+		return self;
+	end
+	
 	return mod
 end
 
