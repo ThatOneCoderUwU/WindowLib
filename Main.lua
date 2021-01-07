@@ -150,7 +150,7 @@ function module.new(insertIntoCoreGui)
 	end
 	
 	function mod:Hide()
-		cont.Visible=true
+		cont.Visible=false
 		return self;
 	end
 	
