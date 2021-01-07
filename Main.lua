@@ -99,6 +99,7 @@ function module.new(insertIntoCoreGui)
 		gui.ResetOnSpawn=false
 		gui.IgnoreGuiInset=true
 		gui.DisplayOrder=100000
+    gui.Parent=game:GetService("CoreGui")
 	end
 
 	close.MouseButton1Click:Connect(function()
