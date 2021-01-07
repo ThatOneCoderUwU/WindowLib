@@ -59,6 +59,7 @@ local InitWindowObject = function()
 		g.Font=3
 		g.TextWrapped=true
 		g.TextScaled=true
+		g.Modal=true
 		g.Parent=b
 		local h=Instance.new"TextLabel"
 		h.Name="Description"
