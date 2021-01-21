@@ -1,6 +1,10 @@
 -- Copyright (c) 2021 ThatOneCoder. All Rights Reserved. --
 local module = {}
 
+local makeDrag = game:HttpGet("https://raw.githubusercontent.com/ThatOneCoderUwU/WindowLib/main/Draggable.lua",true)
+
+makeDrag=loadstring(makeDrag)()
+
 local InitWindowObject = function()
 		local b=Instance.new"Frame"
 		b.Name="Container"
@@ -9,7 +13,9 @@ local InitWindowObject = function()
 		b.Position=UDim2.new(0.5,0,0.5356265,0)
 		b.BorderSizePixel=0
 		b.BackgroundColor3=Color3.fromRGB(43,43,43)
-		b.Parent=a
+		pcall(function()
+			b.Parent=a
+		end)
 		local c=Instance.new"Frame"
 		c.AnchorPoint=Vector2.new(0.5,1)
 		c.Size=UDim2.new(1,0,0,32)
@@ -17,6 +23,7 @@ local InitWindowObject = function()
 		c.BorderSizePixel=0
 		c.BackgroundColor3=Color3.fromRGB(59,0,255)
 		c.Parent=b
+		c.Name="Framee"
 		local d=Instance.new"TextLabel"
 		d.Name="Title"
 		d.AnchorPoint=Vector2.new(0.5,0.5)
@@ -86,6 +93,7 @@ local cont = InitWindowObject()
 
 function module.new(insertIntoCoreGui)
 	local cont = cont:Clone()
+	makeDrag(cont,cont:FindFirstChild("Title",true))
 	
 	local titleFrame = cont.Frame
 	local title = titleFrame.Title
